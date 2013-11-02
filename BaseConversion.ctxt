@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=
+comment0.target=BaseConversion()
+comment0.text=\n\ Default\ Constructor\n
+comment1.params=s
+comment1.target=int\ lookUp(java.lang.String)
+comment2.params=input
+comment2.target=java.lang.String\ lookUp(int)
+comment2.text=\n\ int2string()\n\ Integer\ ->\ Stringdigit\ conversion\n\ @param\ int\ \ \ \ input\ \ \ Input\ value\n\ @return\ String\ \ \ \ \ \ \ \ Converted\ value\n
+comment3.params=input\ inputBase
+comment3.target=int\ Any2Ten(java.lang.String,\ int)
+comment3.text=\n\ Any2Ten()\n\ @param\ String\ \ \ \ \ input\ \ \ \ literal\ string\n\ @param\ int\ \ \ \ \ \ \ \ inputBase\ \ Base\ of\ string\n\ @return\ \ int\ \ \ \ \ \ value\ of\ input\n
+comment4.params=input\ base
+comment4.target=java.lang.String\ Ten2Any(int,\ int)
+comment4.text=\n\ Ten2Any()\n\ @param\ int\ \ \ \ \ \ input\ \ \ \ \ value\ to\ convert\n\ @param\ int\ \ \ \ \ \ base\ \ \ \ \ \ base\ to\ convert\ to\n\ @return\ String\ \ \ \ \ \ \ \ \ \ \ \ value\ of\ int\ in\ the\ base\n
+numComments=5
