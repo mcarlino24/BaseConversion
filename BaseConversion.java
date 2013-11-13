@@ -27,7 +27,7 @@ public class BaseConversion
        //Test for error cases
        
      
-       // String s is null
+       // String s is null0
        if ( s == null )     
        {
            System.out.println("string2int - Error. Null input");
@@ -82,31 +82,21 @@ public class BaseConversion
    }
    
    /**
-    * any2Ten()
+    * Any2Ten()
     * @param String     input    literal string
     * @param int        inputBase  Base of string
     * @return  int      value of input
     */
    
-   public int any2Ten( String input, int base )
+   public int Any2Ten( String input, int inputBase )
    {
        //Error Check
        
-       //null
        if ( input == null )
        {
            System.out.println("Input is a NULL!" );
            System.exit(1);
        }
-       
-       //base check
-       if ( base < 1 && base > symbols.length() )
-       {
-           System.out.println("Base is negative. Not possible. OR No symbols for that base");
-           System.exit(1);
-       }
-       
-       
        
        int outputValue = 0;
        // Calculations
@@ -115,13 +105,13 @@ public class BaseConversion
            String symbol = input.substring( i, i + 1);
            int value = lookUp(symbol);
            
-           if (value >= base)
+           if (value >= inputBase)
            {
-               System.out.println("OutOfBaseRange");
+               System.out.println("The symbols calculated to a value that is out of the range of the base. Error!");
                System.exit(1);
            }
            
-            outputValue *= base;
+            outputValue = outputValue * inputBase;
             outputValue += value; 
        }
        
@@ -172,6 +162,11 @@ public class BaseConversion
        }
        
        return output;
+   }
+   
+   public String Any2Any ( String input, int inputBase, int outputBase )
+   {
+       return Ten2Any( Any2Ten( input, inputBase ), outputBase );
    }
 }
 
