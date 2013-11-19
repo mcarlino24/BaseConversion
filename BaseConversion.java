@@ -1,9 +1,11 @@
 
 /**
- * Write a description of class BaseConversion here.
+ * 
  * 
  * @author (Yousaf Khan) 
  * @version (.001)
+ * 
+ * A class useful for converting numbers of type int or String into any base. 
  */
 
 import java.lang.Math; 
@@ -22,12 +24,20 @@ public class BaseConversion
 
    }
    
+   /**
+    * lookUp()
+    * @param String        s      input literal
+    * @return  int         value of the String param 
+    * 
+    * Return the value of the String literal up to base 16
+    */
+   
    public int lookUp (String s)
    {
        //Test for error cases
        
      
-       // String s is null0
+       // String s is null
        if ( s == null )     
        {
            System.out.println("string2int - Error. Null input");
@@ -163,7 +173,15 @@ public class BaseConversion
        
        return output;
    }
-   
+   /**
+    * Any2Any()
+    * 
+    * @param input     String literal to be converted
+    * @param inputBase    int literal specifying the base of the String literal
+    * @param outputBase   the base to convert to
+    * 
+    * Converts any String literal in the symbols up to base 16 from the base it is in to any up to base 16 and greater than 0.  
+    */
    public String Any2Any ( String input, int inputBase, int outputBase )
    {
        return Ten2Any( Any2Ten( input, inputBase ), outputBase );
